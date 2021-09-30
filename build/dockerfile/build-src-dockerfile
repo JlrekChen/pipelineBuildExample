@@ -5,6 +5,9 @@ USER root
 
 WORKDIR /home/maven
 
+RUN chgrp -R 0 /home/maven/ && \
+    chmod -R g=u /home/maven/
+    
 RUN mkdir /home/maven/target /home/maven/src
 
 COPY src/server.xml /home/maven/target
