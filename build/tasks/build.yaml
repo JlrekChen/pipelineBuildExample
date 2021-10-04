@@ -109,6 +109,7 @@ spec:
       workingDir: /workspace/source
     - name: build
       command:
+        - whoami
         - buildah
         - bud
         - '--tls-verify=$(params.TLSVERIFY)'
