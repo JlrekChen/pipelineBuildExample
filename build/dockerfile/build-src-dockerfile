@@ -1,7 +1,7 @@
 FROM quay.io/marrober/maven-build:latest
 
-USER 1001 
-#USER root
+#USER 1001 
+USER 0
 
 WORKDIR /home/maven
     
@@ -15,4 +15,4 @@ COPY /src /home/maven/src
 RUN mvn --batch-mode package
 
 RUN ls /home/maven/target
-
+USER 1001
