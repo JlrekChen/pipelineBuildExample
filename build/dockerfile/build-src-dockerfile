@@ -10,7 +10,7 @@ COPY src/server.xml /home/maven/target
 COPY pom.xml .
 COPY /src /home/maven/src
 
-RUN ls 
+RUN ls -al
 RUN mvn --batch-mode package
 RUN ls /home/maven/target
 
